@@ -5,6 +5,8 @@ window.addEventListener('DOMContentLoaded', function() {
 
     productCards();
 
+    
+
 
     
  });

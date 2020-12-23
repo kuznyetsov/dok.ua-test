@@ -2,6 +2,9 @@
     .product {
         .img-container {
             max-height: 100px;
+            .icon-heart {
+                bottom: 0;
+            }
         }
         .header-card-product {
             height: 120px;
@@ -21,7 +24,6 @@
             display: block;
             font-size: 12px;
         }
-        
     }
 }
 
@@ -32,6 +34,14 @@
         }
         .header-card-product {
             height: 100px;
+        }
+    }
+}
+
+@media screen and (max-width: 468px) {
+    .product {
+        .img-container {
+            height: auto;
         }
     }
 }

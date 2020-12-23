@@ -19,10 +19,24 @@
 
 .product .img-container {
   height: 205px;
+  position: relative;
 }
 .product .img-container img {
   max-height: 100%;
   max-width: 100%;
+}
+.product .img-container .icon-heart {
+  background: #fafafa;
+  height: 30px;
+  width: 30px;
+  color: #1a77d2;
+  border-radius: 50%;
+  line-height: 30px;
+  text-align: center;
+  position: absolute;
+  right: 0;
+  bottom: 20px;
+  cursor: pointer;
 }
 .product .header-card-product {
   height: 110px;
@@ -111,6 +125,9 @@
   .product .img-container {
     max-height: 100px;
   }
+  .product .img-container .icon-heart {
+    bottom: 0;
+  }
   .product .header-card-product {
     height: 120px;
   }
@@ -136,6 +153,11 @@
   }
   .product .header-card-product {
     height: 100px;
+  }
+}
+@media screen and (max-width: 468px) {
+  .product .img-container {
+    height: auto;
   }
 }
 body {

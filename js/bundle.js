@@ -36,6 +36,7 @@ function productCards() {
                 <div class="product">
                 <div class="img-container">
                 <img src="${this.url_img}" alt="${this.product_image_alt}">
+                <i class="far fa-heart icon-heart"></i>
                 </div>
                     <div class="header-card-product"> 
                         <h4 class="title">${this.product_title}</h4>
@@ -85,6 +86,7 @@ function productCards() {
                 <div class="product">
                 <div class="img-container">
                 <img src="${this.url_img}" alt="${this.product_image_alt}">
+                <i class="far fa-heart icon-heart"></i>
                 </div>
                     <div class="header-card-product"> 
                         <h4 class="title">${this.product_title}</h4>
@@ -252,6 +254,8 @@ window.addEventListener('DOMContentLoaded', function() {
     const productCards = __webpack_require__(/*! ./modules/product-cards */ "./js/modules/product-cards.js");
 
     productCards();
+
+    
 
 
     
