@@ -25,7 +25,9 @@ function productCards() {
             element.innerHTML = `
             <div class="slider__item">
                 <div class="product">
-                    <img src="${this.url_img}" alt="${this.product_image_alt}">
+                <div class="img-container">
+                <img src="${this.url_img}" alt="${this.product_image_alt}">
+                </div>
                     <div class="header-card-product"> 
                         <h4 class="title">${this.product_title}</h4>
                         <p class="descr">Моторное масло Dexos2 5W-30 Синтетическое, 1 л.</p>
@@ -43,12 +45,14 @@ function productCards() {
                         <label for="star-1" title="Оценка «1»"></label>
                     </div>
                     <span class="reviews">(${this.rating_count} рекомендации)</span>
-                    <div class="product-card  d-flex">
+                    <div class="product-card d-block  d-md-flex ">
                         <div class="price">
                         ${this.price}
                             <span class="stock">К-во ${this.available}</span>
                         </div>
-                        <a href="${this.url_direct}" class="btn-buy">Купить</a>
+                        <button class="btn-buy">
+                        <a href="${this.url_direct}" >Купить</a>
+                        </button>
                     </div>
                 </div>
                 </div>
@@ -70,7 +74,9 @@ function productCards() {
             element.innerHTML = `
             <div class="slider__item">
                 <div class="product">
-                    <img src="${this.url_img}" alt="${this.product_image_alt}">
+                <div class="img-container">
+                <img src="${this.url_img}" alt="${this.product_image_alt}">
+                </div>
                     <div class="header-card-product"> 
                         <h4 class="title">${this.product_title}</h4>
                         <p class="descr">Моторное масло Dexos2 5W-30 Синтетическое, 1 л.</p>
@@ -88,12 +94,14 @@ function productCards() {
                         <label for="star-1" title="Оценка «1»"></label>
                     </div>
                     <span class="reviews">(${this.rating_count} рекомендации)</span>
-                    <div class="product-card  d-flex">
+                    <div class="product-card d-block  d-md-flex ">
                         <div class="price">
                         ${this.price}
                             <span class="stock">К-во ${this.available}</span>
                         </div>
-                        <a href="${this.url_direct}" class="btn-buy">Купить</a>
+                        <button class="btn-buy">
+                        <a href="${this.url_direct}" >Купить</a>
+                        </button>
                     </div>
                 </div>
                 </div>

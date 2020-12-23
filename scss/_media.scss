@@ -1,14 +1,37 @@
-@media screen and (max-width: 710px) {
+@media screen and (max-width: 768px) {
     .product {
-        .header-card-product {
-            height: 150px;
+        .img-container {
+            max-height: 100px;
         }
-        img {
-            max-width: 200px;
+        .header-card-product {
+            height: 120px;
+            h4 {
+                font-size: 15px;
+            }
+            .descr {
+                font-size: 13px;
+                margin-top: 15px;
+            }
+        }
+        .btn-buy {
+            width: 100%;
+            margin-top: 15px;
         }
         .reviews {
             display: block;
             font-size: 12px;
+        }
+        
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .product {
+        .img-container {
+            max-height: 200px;
+        }
+        .header-card-product {
+            height: 100px;
         }
     }
 }
