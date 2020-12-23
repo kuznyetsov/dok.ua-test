@@ -17,6 +17,9 @@
   font-size: 43px !important;
 }
 
+.product img {
+  height: 206px;
+}
 .product .header-card-product {
   height: 100px;
 }
@@ -46,6 +49,10 @@
   padding-left: 20px;
   padding-right: 20px;
   text-decoration: none;
+}
+.product .product-card .btn-buy:hover {
+  background-color: #1e5ba5;
+  transition: 0.5s;
 }
 .product .product-card .price .stock {
   display: block;

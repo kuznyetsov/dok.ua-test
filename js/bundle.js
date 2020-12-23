@@ -12,7 +12,7 @@ function productCards() {
     const slider = __webpack_require__(/*! ./slider */ "./js/modules/slider.js");
 
     class MenuCardRandom {
-        constructor(product_id, product_title, product_image_alt, brand_name, price, available, url_direct, rating, rating_count, parent = '.slider .slider__wrapper') {
+        constructor(product_id, product_title, product_image_alt, brand_name, price, available, url_direct, rating, rating_count, url_img, parent = '.slider .slider__wrapper') {
             this.product_id = product_id;
             this.product_title = product_title;
             this.product_image_alt = product_image_alt;
@@ -22,6 +22,7 @@ function productCards() {
             this.url_direct = url_direct;
             this.rating = rating;
             this.rating_count = rating_count;
+            this.url_img = url_img;
             this.parent = document.querySelector(parent); 
         }
         
@@ -33,7 +34,7 @@ function productCards() {
             element.innerHTML = `
             <div class="slider__item">
                 <div class="product">
-                    <img src="https://img.dok.ua/images/tile/group/motornoe-maslo-general-motors-dexos2-5w-30-sinteticheskoe_2618.jpg" alt="${this.product_image_alt}">
+                    <img src="${this.url_img}" alt="${this.product_image_alt}">
                     <div class="header-card-product"> 
                         <h4 class="title">${this.product_title}</h4>
                         <p class="descr">Моторное масло Dexos2 5W-30 Синтетическое, 1 л.</p>
@@ -50,13 +51,13 @@ function productCards() {
                         <input type="radio" id="star-1" name="rating" value="1">
                         <label for="star-1" title="Оценка «1»"></label>
                     </div>
-                    <span class="reviews">(2 рекомендации)</span>
+                    <span class="reviews">(${this.rating_count} рекомендации)</span>
                     <div class="product-card  d-flex">
                         <div class="price">
                         ${this.price}
                             <span class="stock">К-во ${this.available}</span>
                         </div>
-                        <a href="#" class="btn-buy">Купить</a>
+                        <a href="${this.url_direct}" class="btn-buy">Купить</a>
                     </div>
                 </div>
                 </div>
@@ -67,8 +68,8 @@ function productCards() {
         
     }
     class MenuCard extends MenuCardRandom {
-        constructor(product_id, product_title, product_image_alt, brand_name, price, available, url_direct, rating, rating_count, parent) {
-            super(product_id, product_title, product_image_alt, brand_name, price, available, url_direct, rating, rating_count); 
+        constructor(product_id, product_title, product_image_alt, brand_name, price, available, url_direct, rating, rating_count, url_img, parent) {
+            super(product_id, product_title, product_image_alt, brand_name, price, available, url_direct, rating, rating_count, url_img); 
             this.parent = document.querySelector(parent);
         }
         
@@ -78,7 +79,7 @@ function productCards() {
             element.innerHTML = `
             <div class="slider__item">
                 <div class="product">
-                    <img src="https://img.dok.ua/images/tile/group/motornoe-maslo-general-motors-dexos2-5w-30-sinteticheskoe_2618.jpg" alt="${this.product_image_alt}">
+                    <img src="${this.url_img}" alt="${this.product_image_alt}">
                     <div class="header-card-product"> 
                         <h4 class="title">${this.product_title}</h4>
                         <p class="descr">Моторное масло Dexos2 5W-30 Синтетическое, 1 л.</p>
@@ -95,13 +96,13 @@ function productCards() {
                         <input type="radio" id="star-1" name="rating" value="1">
                         <label for="star-1" title="Оценка «1»"></label>
                     </div>
-                    <span class="reviews">(2 рекомендации)</span>
+                    <span class="reviews">(${this.rating_count} рекомендации)</span>
                     <div class="product-card  d-flex">
                         <div class="price">
                         ${this.price}
                             <span class="stock">К-во ${this.available}</span>
                         </div>
-                        <a href="#" class="btn-buy">Купить</a>
+                        <a href="${this.url_direct}" class="btn-buy">Купить</a>
                     </div>
                 </div>
                 </div>
@@ -110,7 +111,7 @@ function productCards() {
             
         } 
     } 
-    
+
     //сортируем массив объектов из json файла
     function shuffle(array) {
         array.sort(() => Math.random() - 0.5);
@@ -131,9 +132,9 @@ function productCards() {
     getResource('http://localhost:3000/products')
     .then(data => {
         shuffle(data);
-        data.forEach(({product_id, product_title, product_image_alt, brand_name, price, available, url_direct, rating, rating_count}) => {
+        data.forEach(({product_id, product_title, product_image_alt, brand_name, price, available, url_direct, rating, rating_count, url_img}) => {
             
-            new MenuCardRandom(product_id, product_title, product_image_alt, brand_name, price, available, url_direct, rating, rating_count).render();
+            new MenuCardRandom(product_id, product_title, product_image_alt, brand_name, price, available, url_direct, rating, rating_count, url_img).render();
             
         });
         slider('.slider__wrapper'); //инициализация слайдера, после построения DOM
@@ -143,9 +144,9 @@ function productCards() {
     //создаем слайдер с обычной загрузкой карточек, подряд
     getResource('http://localhost:3000/products')
     .then(data => {
-        data.forEach(({product_id, product_title, product_image_alt, brand_name, price, available, url_direct, rating, rating_count}) => {
+        data.forEach(({product_id, product_title, product_image_alt, brand_name, price, available, url_direct, rating, rating_count, url_img}) => {
             
-            new MenuCard(product_id, product_title, product_image_alt, brand_name, price, available, url_direct, rating, rating_count, '.slider .slider__wrapper2').render();
+            new MenuCard(product_id, product_title, product_image_alt, brand_name, price, available, url_direct, rating, rating_count, url_img, '.slider .slider__wrapper2').render();
             
         });
         slider('.slider__wrapper2'); //инициализация слайдера, после построения DOM

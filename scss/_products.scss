@@ -1,4 +1,7 @@
 .product {
+    img {
+        height: 206px;
+    }
     .header-card-product {
         height: 100px;
         .title {
@@ -27,6 +30,10 @@
             padding-left: 20px;
             padding-right: 20px;
             text-decoration: none;
+            &:hover {
+                background-color: #1e5ba5;
+                transition: .5s;
+            }
         }
         .price {
             .stock {
