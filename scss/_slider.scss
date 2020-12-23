@@ -1,0 +1,16 @@
+.slider {
+    margin: 0 auto;
+    padding-left: 40px;
+    padding-right: 40px;
+    .slider__wrapper, .slider__wrapper2 {
+        margin-top: 50px;
+        .slider__item {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+    }
+}
+.slick-arrow::before {
+    color: #dadada!important;
+    font-size: 43px!important;
+}

@@ -1,0 +1,14 @@
+@media screen and (max-width: 710px) {
+    .product {
+        .header-card-product {
+            height: 150px;
+        }
+        img {
+            max-width: 200px;
+        }
+        .reviews {
+            display: block;
+            font-size: 12px;
+        }
+    }
+}

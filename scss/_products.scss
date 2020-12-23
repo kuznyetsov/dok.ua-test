@@ -1,0 +1,75 @@
+.product {
+    .header-card-product {
+        height: 100px;
+        .title {
+            margin: 27px 0 0 4px;
+            font-family: 'Roboto';
+            font-size: 16px;
+            font-weight: 500;
+            color: #1a77d2;
+        }
+        .descr {
+            font-family: 'Roboto';
+            font-size: 16px;
+        }
+    }
+    .product-card {
+        margin-top: 30px;
+        .btn-buy {
+            height: 40px;
+            border-radius: 3px;
+            background-color: #1a77d2;
+            text-align: center;
+            font-size: 13px;
+            line-height: 40px;
+            color: #fff;
+            margin-left: auto;
+            padding-left: 20px;
+            padding-right: 20px;
+            text-decoration: none;
+        }
+        .price {
+            .stock {
+                display: block;
+                color: #43a047;
+                font-size: 13px;
+            }
+        }
+    }  
+}
+
+.rating-area {
+	overflow: hidden;
+    margin: 0 auto;
+    &:not(:checked) > input {
+        display: none;
+    }
+    &:not(:checked) > label {
+        float: right;
+        width: auto;
+        padding: 0;
+        cursor: pointer;
+        font-size: 22px;
+        line-height: 32px;
+        color: lightgrey;
+        text-shadow: 1px 1px #bbb;
+        &:before {
+            content: '★';
+        }
+        &:hover, &:hover ~ label {
+            color: gold;
+        }
+    }
+    &> input:checked ~ label {
+        color: gold;
+        text-shadow: 1px 1px #c60;
+    }
+    &> input:checked + label:hover, 
+    &> input:checked + label:hover ~ label, 
+    &> input:checked ~ label:hover,
+    &> input:checked ~ label:hover ~ label,
+    &> label:hover ~ input:checked ~ label {
+        color: gold;
+        text-shadow: 1px 1px goldenrod;
+    }
+}

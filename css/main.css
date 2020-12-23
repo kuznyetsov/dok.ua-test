@@ -1,0 +1,107 @@
+@charset "UTF-8";
+.slider {
+  margin: 0 auto;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.slider .slider__wrapper, .slider .slider__wrapper2 {
+  margin-top: 50px;
+}
+.slider .slider__wrapper .slider__item, .slider .slider__wrapper2 .slider__item {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.slick-arrow::before {
+  color: #dadada !important;
+  font-size: 43px !important;
+}
+
+.product .header-card-product {
+  height: 100px;
+}
+.product .header-card-product .title {
+  margin: 27px 0 0 4px;
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 500;
+  color: #1a77d2;
+}
+.product .header-card-product .descr {
+  font-family: "Roboto";
+  font-size: 16px;
+}
+.product .product-card {
+  margin-top: 30px;
+}
+.product .product-card .btn-buy {
+  height: 40px;
+  border-radius: 3px;
+  background-color: #1a77d2;
+  text-align: center;
+  font-size: 13px;
+  line-height: 40px;
+  color: #fff;
+  margin-left: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-decoration: none;
+}
+.product .product-card .price .stock {
+  display: block;
+  color: #43a047;
+  font-size: 13px;
+}
+
+.rating-area {
+  overflow: hidden;
+  margin: 0 auto;
+}
+.rating-area:not(:checked) > input {
+  display: none;
+}
+.rating-area:not(:checked) > label {
+  float: right;
+  width: auto;
+  padding: 0;
+  cursor: pointer;
+  font-size: 22px;
+  line-height: 32px;
+  color: lightgrey;
+  text-shadow: 1px 1px #bbb;
+}
+.rating-area:not(:checked) > label:before {
+  content: "★";
+}
+.rating-area:not(:checked) > label:hover, .rating-area:not(:checked) > label:hover ~ label {
+  color: gold;
+}
+.rating-area > input:checked ~ label {
+  color: gold;
+  text-shadow: 1px 1px #c60;
+}
+.rating-area > input:checked + label:hover, .rating-area > input:checked + label:hover ~ label, .rating-area > input:checked ~ label:hover, .rating-area > input:checked ~ label:hover ~ label, .rating-area > label:hover ~ input:checked ~ label {
+  color: gold;
+  text-shadow: 1px 1px goldenrod;
+}
+
+@media screen and (max-width: 710px) {
+  .product .header-card-product {
+    height: 150px;
+  }
+  .product img {
+    max-width: 200px;
+  }
+  .product .reviews {
+    display: block;
+    font-size: 12px;
+  }
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  color: #fff;
+  height: 3000px;
+}
+
+/*# sourceMappingURL=main.css.map */
