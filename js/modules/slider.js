@@ -2,7 +2,7 @@
   function sliderInit (selector) {
     $(selector).slick({
         integer: 0.15,
-        infinite: false,
+        infinite: true,
         slidesToShow: 4,
         slidesToScroll: 1,
         responsive: [
